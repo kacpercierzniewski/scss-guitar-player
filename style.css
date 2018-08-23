@@ -36,42 +36,43 @@ body {
   left: -48px;
   top: 100px;
   width: 60px;
-  height: 60px;
+  height: 75px;
   border-radius: 10px;
   background: #527991;
 }
 
 .sleeve.right {
-  transform: translateX(156px);
+  transform: translateX(144px) rotate(-30deg);
 }
 
 .arm {
   border-radius: 10%;
-  left: -39px;
+  left: -36.5px;
   top: 160px;
   background: #e6a8a8;
-  width: 30px;
+  width: 35px;
   height: 130px;
 }
 
 .arm.right {
   animation: none;
-  transform: translateX(168px) rotate(178deg);
+  transform: translateX(192px) translateY(-13px) rotate(-30deg);
 }
 
 .forearm {
   border-radius: 10%;
-  left: 1px;
+  left: 3.5px;
   top: 260px;
-  width: 30px;
+  width: 35px;
   height: 135px;
   background: #e6a8a8;
 }
 
 .forearm.right {
-  top: 220px;
+  top: 211px;
   transform: rotate(100deg);
-  left: 180px;
+  height: 115px;
+  left: 230.4px;
 }
 
 .leg {
@@ -221,9 +222,9 @@ body {
 .vibrating-guitar-string-1 {
   animation: vibrate 1.25s infinite;
   position: absolute;
-  top: 137.5px;
+  top: 105px;
   left: 134px;
-  height: 282.5px;
+  height: 315px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -232,7 +233,7 @@ body {
   position: absolute;
   top: 70px;
   left: 134px;
-  height: 70px;
+  height: 35px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -240,9 +241,9 @@ body {
 .vibrating-guitar-string-2 {
   animation: vibrate 1.25s infinite;
   position: absolute;
-  top: 137.5px;
+  top: 105px;
   left: 138px;
-  height: 282.5px;
+  height: 315px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -251,7 +252,7 @@ body {
   position: absolute;
   top: 70px;
   left: 138px;
-  height: 70px;
+  height: 35px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -259,9 +260,9 @@ body {
 .vibrating-guitar-string-3 {
   animation: vibrate 1.25s infinite;
   position: absolute;
-  top: 137.5px;
+  top: 105px;
   left: 142px;
-  height: 282.5px;
+  height: 315px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -270,7 +271,7 @@ body {
   position: absolute;
   top: 70px;
   left: 142px;
-  height: 70px;
+  height: 35px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -278,9 +279,9 @@ body {
 .vibrating-guitar-string-4 {
   animation: vibrate 1.25s infinite;
   position: absolute;
-  top: 137.5px;
+  top: 105px;
   left: 146px;
-  height: 282.5px;
+  height: 315px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -289,7 +290,7 @@ body {
   position: absolute;
   top: 70px;
   left: 146px;
-  height: 70px;
+  height: 35px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -297,9 +298,9 @@ body {
 .vibrating-guitar-string-5 {
   animation: vibrate 1.25s infinite;
   position: absolute;
-  top: 137.5px;
+  top: 105px;
   left: 150px;
-  height: 282.5px;
+  height: 315px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -308,7 +309,7 @@ body {
   position: absolute;
   top: 70px;
   left: 150px;
-  height: 70px;
+  height: 35px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -316,9 +317,9 @@ body {
 .vibrating-guitar-string-6 {
   animation: vibrate 1.25s infinite;
   position: absolute;
-  top: 137.5px;
+  top: 105px;
   left: 154px;
-  height: 282.5px;
+  height: 315px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -327,7 +328,7 @@ body {
   position: absolute;
   top: 70px;
   left: 154px;
-  height: 70px;
+  height: 35px;
   width: 1px;
   background: #FFFFFF;
 }
@@ -343,15 +344,15 @@ body {
 
 .hand {
   top: 135px;
-  height: 45px;
-  width: 30px;
+  height: 52.5px;
+  width: 35px;
   background: #e6a8a8;
   border-radius: 100%;
 }
 
 .hand.right {
-  left: 125px;
-  top: 122.5px;
+  left: 126px;
+  top: 70px;
   transform: rotate(90deg);
 }
 
@@ -444,11 +445,11 @@ body {
   }
 }
 .arm-move {
-  -webkit-animation: arm-move 1.25s linear infinite;
-  -moz-animation: arm-move 1.25s linear infinite;
-  -ms-animation: arm-move 1.25s linear infinite;
-  -o-animation: arm-move 1.25s linear infinite;
-  animation: arm-move 1.25s linear infinite;
+  -webkit-animation: arm-move 2.5s linear infinite;
+  -moz-animation: arm-move 2.5s linear infinite;
+  -ms-animation: arm-move 2.5s linear infinite;
+  -o-animation: arm-move 2.5s linear infinite;
+  animation: arm-move 2.5s linear infinite;
 }
 
 .guitar-belt {

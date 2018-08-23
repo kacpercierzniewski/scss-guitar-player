@@ -1,13 +1,14 @@
 $player-shirt-color: #527991;
 $player-skin-color: hsl(0, 55%, 78%);
 $player-sleeve-width: 60px;
-$player-arm-width: 30px;
+$player-arm-width: 35px;
 $player-head-diameter: 100px;
 $player-shirt-height: 3* $player-head-diameter;
 $player-shirt-width: $player-sleeve-width *2 ;
 $player-left-margin: 0px;
 $guitar-body-color: #fcee76;
 $animation-time:1.25s;
+$right-arm-rotation:-30deg;
 $guitar-left-margin: 126px;
 $guitar-head-height: 70px;
 $guitar-head-width: 36px;
@@ -52,13 +53,12 @@ body{
     left: -$player-sleeve-width + ($player-sleeve-width /5) ;
     top: 100px ;
     width:$player-sleeve-width;
-    height: $player-sleeve-width;
+    height: $player-sleeve-width*1.25;
     border-radius: 10px;
     background:$player-shirt-color;
 }
 .sleeve.right{
-    transform: translateX($player-shirt-width+ $player-sleeve-width - ($player-sleeve-width /5)*2);
-
+    transform: translateX($player-shirt-width* 1.2) rotate($right-arm-rotation);
 
 }
 
@@ -72,8 +72,9 @@ body{
 
 }
 .arm.right{
+    
     animation: none;
-    transform: translateX($player-shirt-width + $player-sleeve-width - ($player-sleeve-width /5) ) rotate(178deg);
+    transform: translateX($player-shirt-width + $player-sleeve-width*1.2) translateY(-13px) rotate($right-arm-rotation);
 }
 
 .forearm{
@@ -87,9 +88,10 @@ body{
 }
 
 .forearm.right{
-    top: $player-head-diameter + $player-sleeve-width + 60px;
+    top: $player-head-diameter + $player-sleeve-width + 51px;
     transform: rotate(100deg);
-    left:($player-shirt-width + $player-sleeve-width);
+    height:115px;
+    left:($player-shirt-width + $player-sleeve-width*1.84);
 
 }
 
@@ -209,9 +211,9 @@ body{
     .vibrating-guitar-string-#{$i}{
         animation: vibrate $animation-time  infinite;
         position:absolute;
-        top: $guitar-head-height*1.75 +15px;
+        top: $guitar-head-height*1.5;
         left: 4 + $guitar-left-margin + $i * 4;
-        height: $guitar-head-height*4.25- 15px;
+        height: $guitar-head-height*4.5;
         width: $guitar-neck-width/26;
         background: #FFFFFF;
         
@@ -220,7 +222,7 @@ body{
         position:absolute;
         top: $guitar-head-height;
         left: 4 + $guitar-left-margin + $i * 4;
-        height: $guitar-head-height;
+        height: $guitar-head-height/2;
         width: $guitar-neck-width/26;
         background: #FFFFFF;
         
@@ -245,8 +247,8 @@ body{
 }
 
 .hand.right{
-left: 125px;
-top: $guitar-head-height*1.75;
+left: $guitar-left-margin;
+top: $guitar-head-height;
 transform: rotate(90deg);
 }
 
@@ -354,11 +356,11 @@ transform: rotate(90deg);
 }
 
 .arm-move{
-    -webkit-animation: arm-move $animation-time linear infinite;
-    -moz-animation: arm-move $animation-time linear infinite;
-    -ms-animation: arm-move $animation-time linear infinite;
-    -o-animation: arm-move $animation-time linear infinite;
-    animation: arm-move $animation-time linear infinite;
+    -webkit-animation: arm-move $animation-time*2 linear infinite;
+    -moz-animation: arm-move $animation-time*2 linear infinite;
+    -ms-animation: arm-move $animation-time*2 linear infinite;
+    -o-animation: arm-move $animation-time*2 linear infinite;
+    animation: arm-move $animation-time*2 linear infinite;
 
 }
 
