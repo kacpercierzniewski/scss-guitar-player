@@ -61,7 +61,7 @@ body {
 
 .forearm {
   border-radius: 10%;
-  left: -39px;
+  left: -34px;
   top: 265px;
   width: 30px;
   height: 135px;
@@ -415,7 +415,7 @@ body {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(40deg);
+    transform: rotate(20deg);
   }
 }
 .arm-move {

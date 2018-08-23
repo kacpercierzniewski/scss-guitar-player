@@ -78,7 +78,7 @@ body{
 
 .forearm{
     border-radius:10%;
-    left:-$player-sleeve-width + $player-arm-width/2 +($player-sleeve-width /10)  ;
+    left:-$player-sleeve-width + $player-arm-width/2 +($player-sleeve-width /10)+5  ;
     top: $player-head-diameter + $player-sleeve-width +105px;
     width: $player-arm-width;
     height: 135px;
@@ -319,7 +319,7 @@ transform: rotate(90deg);
 
     
        50% {
-        transform: rotate(40deg);
+        transform: rotate(20deg);
       }
   
 }
