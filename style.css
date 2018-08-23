@@ -219,7 +219,7 @@ body {
 }
 
 .vibrating-guitar-string-1 {
-  animation: vibrate 2s infinite;
+  animation: vibrate 1.25s infinite;
   position: absolute;
   top: 137.5px;
   left: 134px;
@@ -238,7 +238,7 @@ body {
 }
 
 .vibrating-guitar-string-2 {
-  animation: vibrate 2s infinite;
+  animation: vibrate 1.25s infinite;
   position: absolute;
   top: 137.5px;
   left: 138px;
@@ -257,7 +257,7 @@ body {
 }
 
 .vibrating-guitar-string-3 {
-  animation: vibrate 2s infinite;
+  animation: vibrate 1.25s infinite;
   position: absolute;
   top: 137.5px;
   left: 142px;
@@ -276,7 +276,7 @@ body {
 }
 
 .vibrating-guitar-string-4 {
-  animation: vibrate 2s infinite;
+  animation: vibrate 1.25s infinite;
   position: absolute;
   top: 137.5px;
   left: 146px;
@@ -295,7 +295,7 @@ body {
 }
 
 .vibrating-guitar-string-5 {
-  animation: vibrate 2s infinite;
+  animation: vibrate 1.25s infinite;
   position: absolute;
   top: 137.5px;
   left: 150px;
@@ -314,7 +314,7 @@ body {
 }
 
 .vibrating-guitar-string-6 {
-  animation: vibrate 2s infinite;
+  animation: vibrate 1.25s infinite;
   position: absolute;
   top: 137.5px;
   left: 154px;
@@ -386,11 +386,11 @@ body {
   }
 }
 .rotating {
-  -webkit-animation: rotating 2s linear infinite;
-  -moz-animation: rotating 2s linear infinite;
-  -ms-animation: rotating 2s linear infinite;
-  -o-animation: rotating 2s linear infinite;
-  animation: rotating 2s linear infinite;
+  -webkit-animation: rotating 1.25s linear infinite;
+  -moz-animation: rotating 1.25s linear infinite;
+  -ms-animation: rotating 1.25s linear infinite;
+  -o-animation: rotating 1.25s linear infinite;
+  animation: rotating 1.25s linear infinite;
 }
 
 @keyframes vibrate {
@@ -419,11 +419,11 @@ body {
   }
 }
 .arm-move {
-  -webkit-animation: arm-move 2s linear infinite;
-  -moz-animation: arm-move 2s linear infinite;
-  -ms-animation: arm-move 2s linear infinite;
-  -o-animation: arm-move 2s linear infinite;
-  animation: arm-move 2s linear infinite;
+  -webkit-animation: arm-move 1.25s linear infinite;
+  -moz-animation: arm-move 1.25s linear infinite;
+  -ms-animation: arm-move 1.25s linear infinite;
+  -o-animation: arm-move 1.25s linear infinite;
+  animation: arm-move 1.25s linear infinite;
 }
 
 .guitar-belt {
