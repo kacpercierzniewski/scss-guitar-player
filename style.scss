@@ -1,0 +1,351 @@
+$player-shirt-color: #527991;
+$player-skin-color: hsl(0, 55%, 78%);
+$player-sleeve-width: 60px;
+$player-arm-width: 30px;
+$player-head-diameter: 100px;
+$player-shirt-height: 3* $player-head-diameter;
+$player-shirt-width: $player-sleeve-width *2 ;
+$player-left-margin: 0px;
+$guitar-body-color: #fcee76;
+$animation-time:2s;
+$guitar-left-margin: 126px;
+$guitar-head-height: 70px;
+$guitar-head-width: 36px;
+$guitar-hole-diameter:60px;
+$guitar-neck-width:26px;
+body{
+    background: #d8e0f7;
+}
+
+.container,.guitar, .head,.shirt,.sleeve, .leg, .arm,.guitar-bridge, .guitar-neck ,.forearm, .guitar-body,.guitar-head, .guitar-hole, .shoe, .hand, .guitar-belt{
+    position: absolute
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    left:45%;
+
+}
+
+.head{
+    left: $player-shirt-width/2 - $player-head-diameter/2;
+    width: $player-head-diameter;
+    height: $player-head-diameter*1.2;
+    background: $player-skin-color;
+    border-radius: 100%
+}
+
+.shirt{
+    top: 100px;
+    width:$player-shirt-width;
+    height: $player-shirt-height;
+    border-radius: 10%;
+    background: $player-shirt-color;
+
+}
+.sleeve{
+    left: -$player-sleeve-width + ($player-sleeve-width /5) ;
+    top: 100px ;
+    width:$player-sleeve-width;
+    height: $player-sleeve-width;
+    border-radius: 10px;
+    background:$player-shirt-color;
+}
+.sleeve.right{
+    transform: translateX($player-shirt-width+ $player-sleeve-width - ($player-sleeve-width /5)*2);
+
+
+}
+
+.arm{
+    border-radius:10%;
+    left: -$player-sleeve-width + $player-arm-width/2 +($player-sleeve-width /10) ;
+    top: $player-head-diameter + $player-sleeve-width;
+    background:  $player-skin-color;
+    width: $player-arm-width;
+    height: 130px;
+
+}
+.arm.right{
+    animation: none;
+    transform: translateX($player-shirt-width + $player-sleeve-width - ($player-sleeve-width /5) );
+}
+
+.forearm{
+    border-radius:10%;
+    left:-$player-sleeve-width + $player-arm-width/2 +($player-sleeve-width /10)  ;
+    top: $player-head-diameter + $player-sleeve-width +105px;
+    width: $player-arm-width;
+    height: 135px;
+    background:$player-skin-color;
+
+}
+
+.forearm.right{
+    top: $player-head-diameter + $player-sleeve-width + 60px;
+    transform: rotate(100deg);
+    left:($player-shirt-width + $player-sleeve-width);
+
+}
+
+.leg{
+    left: 10px;
+    top: $player-head-diameter + $player-shirt-height;
+    height:3* $player-head-diameter;
+    width: $player-shirt-width/2.5;
+    background: #000000;
+    border-radius: 10%;
+
+
+}
+.leg.right{
+    transform: translateX($player-sleeve-width - 5);
+
+}
+
+.shoe{
+    left:10px + $player-shirt-width/5 - $player-shirt-width/8;
+    top:4* $player-head-diameter + $player-shirt-height;
+    width: $player-shirt-width/4;
+    height: 25px;
+    border-radius:100%;
+    background: #ffffff;
+}
+
+.shoe.right{
+
+    transform: translateX($player-sleeve-width - 5);
+
+}
+
+.guitar-head{
+    left:$guitar-left-margin;
+    width:$guitar-head-width;
+    height:$guitar-head-height;
+    border-radius:6px;
+    background: black;
+}
+.guitar-neck{
+    top: $guitar-head-height;
+    left: $guitar-left-margin + $guitar-head-width/2 - $guitar-neck-width/2;
+    width:$guitar-neck-width;
+    height:$guitar-head-height*3;
+    background: #8d270e;
+}
+
+@for $i from 1 through 6{
+.guitar-tuner-#{$i}{
+    position: absolute;
+    @if $i<4{
+    left:$guitar-left-margin - ( $guitar-head-width/2 - $guitar-neck-width/2);
+    top:-10px +$i * ($guitar-head-height - 10px)/3;
+    }
+    @else {
+        top:$i*($guitar-head-height - 10px)/3 - $guitar-head-height;
+        left:$guitar-left-margin + $guitar-head-width;
+    }
+    width: 5px;
+    height:10px;
+    border-radius:100%;
+    background: #c4c2c2;
+
+}
+
+}
+
+.guitar-body.left1{
+    top:240px;
+    left: 80px;
+    width: 100px;
+    height: 100px;
+    border-radius:100%;
+    background: $guitar-body-color;
+
+
+}
+
+.guitar-body.right1{
+    top:240px;
+    left:110px;
+    width: 100px;
+    height: 100px;
+    border-radius:100%;
+    background: $guitar-body-color;
+
+
+}
+
+.guitar-body.center{
+    top:300px;
+    left: 44px;
+    width: 200px;
+    height: 200px;
+    border-radius:100%;
+    background: $guitar-body-color;
+
+
+}
+.guitar-hole{
+    top:-2px + $guitar-head-height*4 ;
+    left:$guitar-left-margin + $guitar-head-width/2 -$guitar-hole-diameter/2 ;
+    width:$guitar-hole-diameter;
+    height:$guitar-hole-diameter;
+    border-radius:100%;
+    background:#6d1803;
+}
+ 
+.guitar{
+    transform: rotate(60deg);
+    left: 300px;
+    top:100px;
+
+}
+@for $i from 1 through 6{
+    .vibrating-guitar-string-#{$i}{
+        animation: vibrate $animation-time  infinite;
+        position:absolute;
+        top: $guitar-head-height*1.75 +15px;
+        left: 4 + $guitar-left-margin + $i * 4;
+        height: $guitar-head-height*4.25- 15px;
+        width: $guitar-neck-width/26;
+        background: #FFFFFF;
+        
+    }
+    .non-vibrating-guitar-string-#{$i}{
+        position:absolute;
+        top: $guitar-head-height;
+        left: 4 + $guitar-left-margin + $i * 4;
+        height: $guitar-head-height;
+        width: $guitar-neck-width/26;
+        background: #FFFFFF;
+        
+    }
+}
+
+.guitar-bridge{
+    top: $guitar-head-height + $guitar-head-height*5-4px;
+    left:$guitar-left-margin + $guitar-head-width/2 -$guitar-hole-diameter/2 ;
+    width:$guitar-hole-diameter;;
+    height: 10px;
+    background: black;
+    border-radius: 100%;
+
+}
+.hand{
+    top: 135px;
+    height: $player-arm-width*1.5;
+    width: $player-arm-width;
+    background: $player-skin-color;
+    border-radius: 100%;
+}
+
+.hand.right{
+left: 125px;
+top: $guitar-head-height*1.75;
+transform: rotate(90deg);
+}
+
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -webkit-transform-origin: 0% top;
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform-origin: 0% top;
+     -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating $animation-time linear infinite;
+  -moz-animation: rotating $animation-time linear infinite;
+  -ms-animation: rotating $animation-time linear infinite;
+  -o-animation: rotating $animation-time linear infinite;
+  animation: rotating $animation-time linear infinite;
+}
+
+@keyframes vibrate {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(3px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-1px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(2px, 0, 0);
+    }
+    100%{
+        transform: translate3d(0px,0,0);
+    }
+
+}
+
+@keyframes arm-move{
+    0% ,100%{
+        transform: rotate(0deg);
+      }
+
+    
+       50% {
+        transform: rotate(40deg);
+      }
+  
+}
+
+.arm-move{
+    -webkit-animation: arm-move $animation-time linear infinite;
+    -moz-animation: arm-move $animation-time linear infinite;
+    -ms-animation: arm-move $animation-time linear infinite;
+    -o-animation: arm-move $animation-time linear infinite;
+    animation: arm-move $animation-time linear infinite;
+
+}
+
+.guitar-belt{
+    width:10px;
+    height:200px;
+    background:black;
+}
+
+
+.footer {
+    font-family: 'Homemade Apple', cursive;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(20, 20, 20);
+    text-align: right;
+}
