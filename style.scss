@@ -78,8 +78,8 @@ body{
 
 .forearm{
     border-radius:10%;
-    left:-$player-sleeve-width + $player-arm-width/2 +($player-sleeve-width /10)+5  ;
-    top: $player-head-diameter + $player-sleeve-width +105px;
+    left:-$player-sleeve-width + $player-arm-width/2 +($player-sleeve-width /10)+40  ;
+    top: $player-head-diameter + $player-sleeve-width +100px;
     width: $player-arm-width;
     height: 135px;
     background:$player-skin-color;
@@ -289,7 +289,36 @@ transform: rotate(90deg);
   -o-animation: rotating $animation-time linear infinite;
   animation: rotating $animation-time linear infinite;
 }
+.rotating-2{
+    -webkit-animation: rotating-2 $animation-time*2 linear infinite;
+    -moz-animation: rotating-2 $animation-time*2 linear infinite;
+    -ms-animation: rotating-2 $animation-time*2 linear infinite;
+    -o-animation: rotating-2 $animation-time*2 linear infinite;
+    animation: rotating-2 $animation-time*2 linear infinite;
 
+}
+@keyframes rotating-2{
+
+    0% {
+        transform: rotate(-50deg);
+      }
+      
+       20%, 80% {
+        transform: rotate(-30deg);
+      }
+    
+      30%, 50%, 70% {
+        transform: rotate(-50deg);
+      }
+    
+      40%, 60% {
+        transform: rotate(-30deg);
+      }
+      100%{ 
+        transform: rotate(-50deg);
+      }
+
+}
 @keyframes vibrate {
     10%, 90% {
       transform: translate3d(-1px, 0, 0);
@@ -319,7 +348,7 @@ transform: rotate(90deg);
 
     
        50% {
-        transform: rotate(20deg);
+        transform: rotate(5deg);
       }
   
 }

@@ -61,8 +61,8 @@ body {
 
 .forearm {
   border-radius: 10%;
-  left: -34px;
-  top: 265px;
+  left: 1px;
+  top: 260px;
   width: 30px;
   height: 135px;
   background: #e6a8a8;
@@ -393,6 +393,31 @@ body {
   animation: rotating 1.25s linear infinite;
 }
 
+.rotating-2 {
+  -webkit-animation: rotating-2 2.5s linear infinite;
+  -moz-animation: rotating-2 2.5s linear infinite;
+  -ms-animation: rotating-2 2.5s linear infinite;
+  -o-animation: rotating-2 2.5s linear infinite;
+  animation: rotating-2 2.5s linear infinite;
+}
+
+@keyframes rotating-2 {
+  0% {
+    transform: rotate(-50deg);
+  }
+  20%, 80% {
+    transform: rotate(-30deg);
+  }
+  30%, 50%, 70% {
+    transform: rotate(-50deg);
+  }
+  40%, 60% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(-50deg);
+  }
+}
 @keyframes vibrate {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
@@ -415,7 +440,7 @@ body {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(20deg);
+    transform: rotate(5deg);
   }
 }
 .arm-move {
