@@ -2,7 +2,7 @@ body {
   background: #d8e0f7;
 }
 
-.container, .guitar, .head, .shirt, .sleeve, .leg, .arm, .guitar-bridge, .guitar-neck, .forearm, .guitar-body, .guitar-head, .guitar-hole, .shoe, .hand, .guitar-belt {
+.container, .guitar, .head, .shirt, .sleeve, .leg, .arm, .guitar-bridge, .guitar-neck, .forearm, .guitar-body, .guitar-head, .guitar-hole, .shoe, .hand, .guitar-belt, .guitar-belt-2 {
   position: absolute;
 }
 
@@ -56,7 +56,7 @@ body {
 
 .arm.right {
   animation: none;
-  transform: translateX(168px);
+  transform: translateX(168px) rotate(178deg);
 }
 
 .forearm {
@@ -427,9 +427,17 @@ body {
 }
 
 .guitar-belt {
-  width: 10px;
-  height: 200px;
+  top: 100px;
+  left: -30px;
+  transform: rotate(15deg);
+  width: 15px;
+  height: 320px;
   background: black;
+}
+
+.guitar-belt.right {
+  height: 270px;
+  transform: translateX(160px) rotate(170deg);
 }
 
 .footer {
